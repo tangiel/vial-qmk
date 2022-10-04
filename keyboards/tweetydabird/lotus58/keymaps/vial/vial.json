@@ -2,8 +2,7 @@
 	"name": "Lotus 58 Glow VIAL",
 	"author": "Markus Knutsson",
 	
-	"lighting": "none",
-	
+	"lighting": "qmk_rgblight",
 	
 	"matrix": {
 		"rows": 10,
@@ -11,12 +10,13 @@
 	},
   
 	"layouts": {
-		"labels":[
+		"labels":
+		[
 			[
 				"Left Encoder",
 				"Bottom Placement",
 				"Top Placement"
-			]
+			],
 			[
 				"Right Encoder",
 				"Bottom Placement",
@@ -24,44 +24,45 @@
 			]	
 		],
 		
-    "keymap": [
-      [
-    {
-      "x": 6,
-      "d": true
-    },
-    "4,0\n\n\n1,0",
-    {
-      "x": 2.25,
-      "d": true
-    },
-    "9,0\n\n\n2,0"
-  ],
-  [
-    {
-      "y": -0.75,
-      "x": 3
-    },
-    "0,3",
-    {
-      "x": 8.25
-    },
-    "5,3"
-  ],
-  [
-    {
-      "y": -0.87,
-      "x": 2
-    },
-    "0,2",
-    {
-      "x": 1
-    },
-    "0,4",
-    {
-      "x": 6.25
-    },
-    "5,4",
+    "keymap": 
+	[
+		[
+			{
+				"x": 6,
+				"d": true
+			},
+			"4,0\n\n\n1,0",
+			{
+				"x": 2.25,
+				"d": true
+			},
+			"9,0\n\n\n2,0"
+		],
+		[
+			{
+				"y": -0.75,
+				"x": 3
+			},
+			"0,3",
+			{
+				"x": 8.25
+			},
+			"5,3"
+		],
+		[
+			{
+				"y": -0.87,
+				"x": 2
+			},
+			"0,2",
+			{
+				"x": 1
+			},
+			"0,4",
+			{
+				"x": 6.25
+			},
+			"5,4",
     {
       "x": 1
     },
