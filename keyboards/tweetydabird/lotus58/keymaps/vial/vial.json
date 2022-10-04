@@ -1,6 +1,14 @@
 {
 	"name": "Lotus 58 Glow VIAL",
-	"author": "Markus Knutsson",
+	"manufacturer": "Tweetys Wild Thinking",
+	"maintainer": "Markus Knutsson",
+	"url": "https://lectronz.com/stores/tweetys-wild-thinking",
+    	
+	"usb": {
+		"vid": "0xFEED",
+        "pid": "0x23B0",
+		"device_version": "1.1.1",
+	},
 	
 	"lighting": "qmk_rgblight",
 	
