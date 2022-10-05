@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 # Copyright 2022 Markus Knutsson (@TweetyDaBird)
 # SPDX-License-Identifier: GPL-2.0-or-later
 
@@ -38,6 +37,3 @@ SLEEP_LED_ENABLE = no       # Breathing sleep LED during USB suspend # Do not en
 SPACE_CADET_ENABLE = no
 GRAVE_ESC_ENABLE = no 
 MAGIC_ENABLE = no
-=======
-# Blank
->>>>>>> Stashed changes
