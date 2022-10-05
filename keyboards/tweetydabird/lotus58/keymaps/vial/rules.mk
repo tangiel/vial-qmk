@@ -10,8 +10,16 @@ VIAL_ENABLE = yes
 
 ENCODER_MAP_ENABLE = yes
 
+<<<<<<< Updated upstream
 QMK_SETTINGS = no
 KEY_OVERRIDE_ENABLE = no
 COMBO_ENABLE = no
 TAP_DANCE_ENABLE = no
 QMK_SETTINGS = no
+=======
+TAP_DANCE_ENABLE = yes
+
+QMK_SETTINGS = no
+KEY_OVERRIDE_ENABLE = no
+COMBO_ENABLE = no
+>>>>>>> Stashed changes
