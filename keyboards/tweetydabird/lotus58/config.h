@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 // Copyright 2022 Markus Knutsson (@TweetyDaBird)
 // SPDX-License-Identifier: GPL-2.0-or-later
 
@@ -55,8 +56,27 @@
 #define DEBOUNCE 5
 
 // Bootmagic Lite key configuration
+=======
+#pragma once
+#include "config_common.h"
+
+#define SPLIT_HAND_PIN B5
+#define SPLIT_LAYER_STATE_ENABLE
+#define SPLIT_LED_STATE_ENABLE
+#define SPLIT_OLED_ENABLE
+
+#define RGBLIGHT_EFFECT_BREATHING
+#define RGBLIGHT_EFFECT_RAINBOW_MOOD
+
+#define RGBLIGHT_DEFAULT_MODE RGBLIGHT_MODE_RAINBOW_MOOD
+#define RGBLIGHT_DEFAULT_VAL ( RGBLIGHT_LIMIT_VAL / 2 )
+
+/* Bootmagic Lite key configuration */
+>>>>>>> Stashed changes
 #define BOOTMAGIC_LITE_ROW 0
 #define BOOTMAGIC_LITE_COLUMN 0
+#define BOOTMAGIC_LITE_ROW_RIGHT 5
+#define BOOTMAGIC_LITE_COLUMN_RIGHT 0
 
 // reduce memory
 #undef LOCKING_SUPPORT_ENABLE
@@ -64,7 +84,11 @@
 #define NO_ACTION_ONESHOT
 #define LAYER_STATE_8BIT
 
+<<<<<<< Updated upstream
 // VIAL specific reduce memory
 #define VIAL_COMBO_ENTRIES 4
 #define VIAL_TAP_DANCE_ENTRIES 4
-#define VIAL_KEY_OVERRIDE_ENTRIES 4
+#define VIAL_KEY_OVERRIDE_ENTRIES 4#define VIAL_KEY_OVERRIDE_ENTRIES 4
+=======
+//#define DYNAMIC_KEYMAP_MACRO_COUNT 0
+>>>>>>> Stashed changes
