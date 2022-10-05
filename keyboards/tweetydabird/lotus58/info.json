@@ -34,7 +34,7 @@
         "nkro": true,
         "oled": true,
         "rgblight": true,
-        "sleep_led": false,
+        "sleep_led": true,
         "space_cadet": false,
         "tap_dance": false
     },
