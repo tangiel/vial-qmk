@@ -38,7 +38,6 @@
         "space_cadet": false,
         "tap_dance": false
     },
-    
 
 	"keyboard_folder": "tweetydabird/lotus58",
     
@@ -52,8 +51,6 @@
         "rows": 10
     },
     
-	
-    
 	"qmk": {
         "tap_keycode_delay": 10
     },
@@ -63,7 +60,12 @@
         "pin": "D3",
         "split": true,
         "split_count": [29, 29]
+		"animations": {
+            "breathing": true,
+			"rainbow_mood": true,
+        }
     },
+	
     "split": {
         "enabled": true,
         "encoder": {
@@ -84,10 +86,12 @@
             "sync_modifiers": true
         }
     },
+	
     "tapping": {
         "term": 175,
         "toggle": 2
     },
+	
     "usb": {
 		"vid": "0xFEED",
         "pid": "0x23B0",

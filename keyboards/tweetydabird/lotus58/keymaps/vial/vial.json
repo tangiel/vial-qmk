@@ -2,6 +2,11 @@
 	"name": "Lotus 58 Glow VIAL",
 	"author": "Markus Knutsson",
 	
+	"lighting": "qmk_rgblight",
+	"underglowEffects": {
+          ["All Off", 0],
+    },
+	
 	"matrix": {
 		"rows": 10,
 		"cols": 6
