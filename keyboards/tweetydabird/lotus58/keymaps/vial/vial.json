@@ -3,9 +3,6 @@
 	"author": "Markus Knutsson",
 	
 	"lighting": "qmk_rgblight",
-	"underglowEffects": {
-          ["All Off", 0],
-    },
 	
 	"matrix": {
 		"rows": 10,
