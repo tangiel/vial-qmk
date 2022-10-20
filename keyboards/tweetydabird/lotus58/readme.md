@@ -1,6 +1,6 @@
 # lotus58
 
-![lotus58](imgur.com image replace me!)
+![lotus58](https://i.imgur.com/WWgpp0S.jpg)
 
 *A short description of the keyboard/project*
 
