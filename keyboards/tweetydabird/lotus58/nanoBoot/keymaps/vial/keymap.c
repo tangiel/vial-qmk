@@ -4,6 +4,10 @@
 #include QMK_KEYBOARD_H
 #define ____ KC_TRNS
 
+void keyboard_post_init_user(void) {
+	autoshift_disable();
+}
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [0] = LAYOUT(
@@ -31,7 +35,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
     [3] = LAYOUT(
-    RESET, ____, ____, ____, NK_TOGG, ____, ____,        ____, ____, ____, ____, RGB_VAI, RGB_VAD, RGB_TOG,
+    RESET, ____, ____, ____, NK_TOGG, KC_ASTG, ____,        ____, ____, ____, ____, RGB_VAI, RGB_VAD, RGB_TOG,
 	____, ____, ____, ____, ____, ____,                    ____, ____, ____, RGB_HUI, RGB_HUD, RGB_M_P,
 	____, ____, ____, ____, ____, ____,                    ____, ____, ____, RGB_SAI, RGB_SAD, RGB_M_B,
 	____, ____, ____, ____, ____, ____, ____,        ____, ____, ____, ____, RGB_SPI, RGB_SPD, RGB_M_R,
@@ -80,6 +84,11 @@ static void print_status_narrow(void) {
     oled_write_P(PSTR("\n"), false);
     led_t led_usb_state = host_keyboard_led_state();
     oled_write_ln_P(PSTR("Caps- lock"), led_usb_state.caps_lock);
+	
+	bool autoshift = get_autoshift_state();
+	oled_write_P(PSTR("\n"), false);
+	oled_write_P(PSTR("Auto-Shift"), autoshift);
+	oled_write_P(PSTR("\n"), false);
 }
 
 oled_rotation_t oled_init_user(oled_rotation_t rotation) {
@@ -105,24 +114,3 @@ bool oled_task_user(void) {
 layer_state_t layer_state_set_user(layer_state_t state) {
    return update_tri_layer_state(state, 1, 2, 3);
 }
-
-#ifdef ENCODER_ENABLE
-
-bool encoder_update_user(uint8_t index, bool clockwise) {
-    if (index == 0) {
-        if (clockwise) {
-            tap_code(KC_VOLD);
-        } else {
-            tap_code(KC_VOLU);
-        }
-    } else if (index == 1) {
-        if (clockwise) {
-                tap_code(KC_VOLD);
-            } else {
-                tap_code(KC_VOLU);
-            }
-        }
-    return true;
-}
-
-#endif
