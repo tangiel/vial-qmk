@@ -1,6 +1,9 @@
 # Copyright 2022 Markus Knutsson (@TweetyDaBird)
 # SPDX-License-Identifier: GPL-2.0-or-later
 
+# Standard ProMicro bootloader
+BOOTLOADER = caterina
+
 # Link Time Optimization
 LTO_ENABLE = yes			# Optimize size at compile (takes longer time)
 
