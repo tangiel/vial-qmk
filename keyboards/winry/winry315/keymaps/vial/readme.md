@@ -1,1 +1,1 @@
-# The default keymap for Winry315
+# The Vial keymap for Winry315

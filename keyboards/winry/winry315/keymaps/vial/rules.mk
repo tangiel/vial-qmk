@@ -3,5 +3,5 @@ VIA_ENABLE = yes
 LTO_ENABLE = yes
 QMK_SETTINGS = no
 
-
-SRC += encoder_actions.c
+RGBLIGHT_ENABLE = yes
+RGB_MATRIX_ENABLE = no
