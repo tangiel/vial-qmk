@@ -28,11 +28,6 @@
 #define ENCODERS_PAD_B { F0, B1, B7 }
 #define ENCODER_RESOLUTION 4
 
-// Encoder mappings (used for VIA).
-#define ENCODERS 3
-#define ENCODERS_CW_KEY  { { 22, 0 }, { 18, 0 }, { 20, 0 } }
-#define ENCODERS_CCW_KEY { { 23, 0 }, { 19, 0 }, { 21, 0 } }
-
 // clang-format on
 
 // RGB LED parameters.
@@ -49,15 +44,16 @@
 #    define RGBLIGHT_SAT_STEP 8
 #    define RGBLIGHT_VAL_STEP 8
 #    define RGBLIGHT_SLEEP
+
 #    define RGBLIGHT_EFFECT_BREATHING
 #    define RGBLIGHT_EFFECT_RAINBOW_MOOD
 #    define RGBLIGHT_EFFECT_RAINBOW_SWIRL
-#    define RGBLIGHT_EFFECT_SNAKE
-#    define RGBLIGHT_EFFECT_KNIGHT
-#    define RGBLIGHT_EFFECT_CHRISTMAS
-#    define RGBLIGHT_EFFECT_STATIC_GRADIENT
-#    define RGBLIGHT_EFFECT_RGB_TEST
-#    define RGBLIGHT_EFFECT_ALTERNATING
+//#    define RGBLIGHT_EFFECT_SNAKE
+//#    define RGBLIGHT_EFFECT_KNIGHT
+//#    define RGBLIGHT_EFFECT_CHRISTMAS
+//#    define RGBLIGHT_EFFECT_STATIC_GRADIENT
+//#    define RGBLIGHT_EFFECT_RGB_TEST
+//#    define RGBLIGHT_EFFECT_ALTERNATING
 #endif
 
 // RGB Matrix configuration.
