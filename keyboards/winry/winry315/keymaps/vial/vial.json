@@ -2,21 +2,8 @@
   "name": "Winry315",
   "vendorId": "0xF1F1",
   "productId": "0x0315",
-  "lighting": {
-    "extends": "qmk_rgblight",
-    "underglowEffects": [
-      ["None", 0],
-      ["Solid Color", 1],
-      ["Breathing", 1],
-      ["Cycle All", 1]
-    ],
-    "supportedLightingValues": [
-      128,
-      129,
-      130,
-      131
-    ]
-  },
+  "lighting": "qmk_rgblight",
+    
   "matrix": {
     "rows": 1,
     "cols": 24
