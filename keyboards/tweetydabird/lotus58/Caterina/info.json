@@ -1,17 +1,17 @@
 {
-	"keyboard_name": "Lotus 58 Glow",
-	"manufacturer": "Tweetys Wild Thinking",
-	"url": "https://lectronz.com/stores/tweetys-wild-thinking",
-	"maintainer": "TweetyDaBird",	
-	
-	"development_board": "promicro",
-	"bootloader_instructions": "Short marked pads on PCB, or hold top-outer key when plugging in each hand.",
-    
-	"debounce": 5,
-    
-	"diode_direction": "COL2ROW",
-    
-	"encoder": {
+    "keyboard_name": "Lotus 58 Glow",
+    "manufacturer": "Tweetys Wild Thinking",
+    "url": "https://lectronz.com/stores/tweetys-wild-thinking",
+    "maintainer": "TweetyDaBird",
+
+    "development_board": "promicro",
+    "bootloader_instructions": "Short marked pads on PCB, or hold top-outer key when plugging in each hand.",
+
+    "debounce": 5,
+
+    "diode_direction": "COL2ROW",
+
+    "encoder": {
         "enabled": true,
         "rotary": [
             {
@@ -21,8 +21,8 @@
             }
         ]
     },
-    
-	"features": {
+
+    "features": {
         "audio": false,
         "auto_shift": false,
         "command": false,
@@ -39,33 +39,33 @@
         "tap_dance": false
     },
 
-	"keyboard_folder": "tweetydabird/lotus58",
-    
-	"matrix_pins": {
+    "keyboard_folder": "tweetydabird/lotus58",
+
+    "matrix_pins": {
         "cols": ["B1", "B2", "B3", "B6", "F7", "F6"],
         "rows": ["D4", "C6", "D7", "E6", "B4"]
     },
-    
-	"matrix_size": {
+
+    "matrix_size": {
         "cols": 6,
         "rows": 10
     },
-    
-	"qmk": {
+
+    "qmk": {
         "tap_keycode_delay": 10
     },
-    
-	"rgblight": {
+
+    "rgblight": {
         "led_count": 58,
         "pin": "D3",
         "split": true,
-        "split_count": [29, 29]
-		"animations": {
+        "split_count": [29, 29],
+        "animations": {
             "breathing": true,
-			"rainbow_mood": true,
+            "rainbow_mood": true
         }
     },
-	
+
     "split": {
         "enabled": true,
         "encoder": {
@@ -86,20 +86,20 @@
             "sync_modifiers": true
         }
     },
-	
+
     "tapping": {
         "term": 175,
         "toggle": 2
     },
-	
+
     "usb": {
-		"vid": "0xFEED",
+        "vid": "0xFEED",
         "pid": "0x23B0",
-		"device_version": "1.2.3",
-		"force_nkro": true
-	},
-    
-	"layouts": {
+        "device_version": "1.2.3",
+        "force_nkro": true
+    },
+
+    "layouts": {
         "LAYOUT": {
             "layout": [
                 { "label": "L00", "matrix": [0, 0], "w": 1, "x": 0, "y": 0.5 },
