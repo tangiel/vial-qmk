@@ -4,10 +4,6 @@
 #include QMK_KEYBOARD_H
 #define ____ KC_TRNS
 
-void keyboard_post_init_user(void) {
-	autoshift_disable();
-}
-
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [0] = LAYOUT(
@@ -17,7 +13,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	LCTL_T(KC_LEFT), 	KC_Z, 	KC_X,   KC_C,   KC_V,   KC_B, 	KC_DOWN,		KC_UP,  KC_N, 	KC_M,   KC_COMM,	KC_DOT, 	KC_SLSH, 	RCTL_T(KC_RIGHT),
 						KC_DEL, TG(1), 		LALT_T(KC_LGUI),	LSFT_T(KC_SPACE),    	RSFT_T(KC_ENTER), 	RALT_T(KC_APP), 		TG(2), 			KC_BSPC
 	),
- 
+
     [1] = LAYOUT(
     ____, KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, ____,        ____, KC_F6, KC_F7, KC_F8, KC_F9, KC_F10, KC_F11,
 	____, ____, ____, ____, ____, ____,                    ____, ____, ____, ____, ____, ____,
@@ -35,7 +31,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
     [3] = LAYOUT(
-    RESET, ____, ____, ____, NK_TOGG, KC_ASTG, ____,        ____, ____, ____, ____, RGB_VAI, RGB_VAD, RGB_TOG,
+    QK_BOOT, ____, ____, ____, NK_TOGG, KC_ASTG, ____,        ____, ____, ____, ____, RGB_VAI, RGB_VAD, RGB_TOG,
 	____, ____, ____, ____, ____, ____,                    ____, ____, ____, RGB_HUI, RGB_HUD, RGB_M_P,
 	____, ____, ____, ____, ____, ____,                    ____, ____, ____, RGB_SAI, RGB_SAD, RGB_M_B,
 	____, ____, ____, ____, ____, ____, ____,        ____, ____, ____, ____, RGB_SPI, RGB_SPD, RGB_M_R,
@@ -79,16 +75,18 @@ static void print_status_narrow(void) {
         default:
             oled_write_P(PSTR("Undef"), false);
     }
-	
+
 	// Display capslock
     oled_write_P(PSTR("\n"), false);
     led_t led_usb_state = host_keyboard_led_state();
     oled_write_ln_P(PSTR("Caps- lock"), led_usb_state.caps_lock);
-	
-	bool autoshift = get_autoshift_state();
-	oled_write_P(PSTR("\n"), false);
-	oled_write_P(PSTR("Auto-Shift"), autoshift);
-	oled_write_P(PSTR("\n"), false);
+
+#if defined(AUTO_SHIFT_ENABLE)
+    bool autoshift = get_autoshift_state();
+    oled_write_P(PSTR("\n"), false);
+    oled_write_P(PSTR("Auto-Shift"), autoshift);
+    oled_write_P(PSTR("\n"), false);
+#endif
 }
 
 oled_rotation_t oled_init_user(oled_rotation_t rotation) {
