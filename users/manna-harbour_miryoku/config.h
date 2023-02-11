@@ -41,3 +41,6 @@
   #define EXTRA_SHORT_COMBOS
 #endif
 
+#ifdef DYNAMIC_KEYMAP_ENABLE
+#define DYNAMIC_KEYMAP_LAYER_COUNT 10
+#endif

@@ -17,6 +17,7 @@ MIRYOKU_LAYER_LIST
 #undef MIRYOKU_X
 };
 
+#ifndef VIAL_TAP_DANCE_ENABLE
 void u_td_fn_boot(qk_tap_dance_state_t *state, void *user_data) { \
   if (state->count == 2) {
     reset_keyboard();
@@ -38,6 +39,7 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 MIRYOKU_LAYER_LIST
 #undef MIRYOKU_X
 };
+#endif
 
 
 // keymap
@@ -51,12 +53,14 @@ MIRYOKU_LAYER_LIST
 
 // shift functions
 
-const key_override_t capsword_key_override = ko_make_basic(MOD_MASK_SHIFT, CW_TOGG, KC_CAPS);
+#ifndef VIAL_KEY_OVERRIDE_ENABLE
+const key_override_t capsword_key_override = ko_make_basic(MOD_MASK_SHIFT, CAPSWRD, KC_CAPS);
 
 const key_override_t **key_overrides = (const key_override_t *[]){
     &capsword_key_override,
     NULL
 };
+#endif
 
 
 // thumb combos
@@ -89,3 +93,33 @@ combo_t key_combos[COMBO_COUNT] = {
   COMBO(thumbcombos_fun, KC_APP)
 };
 #endif
+
+void keyboard_post_init_user(void) {
+#ifdef VIAL_TAP_DANCE_ENABLE
+  vial_tap_dance_entry_t tdboot = { KC_NO,
+                                    KC_NO,
+                                    QK_BOOT,
+                                    KC_NO,
+                                    TAPPING_TERM };
+  dynamic_keymap_set_tap_dance(0, &tdboot);
+#define MIRYOKU_X(LAYER, STRING) \
+  vial_tap_dance_entry_t td##LAYER = { KC_NO, \
+                                       KC_NO, \
+                                       DF(U_TD_U_##LAYER), \
+                                       KC_NO, \
+                                       TAPPING_TERM }; \
+  dynamic_keymap_set_tap_dance(U_TD_U_##LAYER, &td##LAYER);
+MIRYOKU_LAYER_LIST
+#undef MIRYOKU_X
+#endif
+
+#ifdef VIAL_KEY_OVERRIDE_ENABLE
+  vial_key_override_entry_t capsword_key_override = { 0 };
+  capsword_key_override.layers = ~0;
+  capsword_key_override.trigger = CAPSWRD;
+  capsword_key_override.trigger_mods = MOD_MASK_SHIFT;
+  capsword_key_override.replacement = KC_CAPS;
+  capsword_key_override.options = vial_ko_option_activation_trigger_down | vial_ko_option_activation_required_mod_down | vial_ko_option_activation_negative_mod_up;
+  dynamic_keymap_set_key_override(0, &capsword_key_override);
+#endif
+}

@@ -14,6 +14,7 @@ MIRYOKU_LAYER_LIST
 #undef MIRYOKU_X
 };
 
+
 #define U_MACRO_VA_ARGS(macro, ...) macro(__VA_ARGS__)
 
 #if !defined (MIRYOKU_MAPPING)

@@ -8,6 +8,17 @@
 #pragma once
 
 
+// Backwards compatibility with older keycodes in VIAL
+#ifdef VIAL_ENABLE
+#  ifndef CW_TOGG
+#    define CW_TOGG CAPSWRD
+#  endif
+#  ifndef OU_AUTO
+#    define OU_AUTO OUT_AUTO
+#  endif
+#endif
+
+
 #define MIRYOKU_ALTERNATIVES_BASE_AZERTY_FLIP \
 KC_A,              KC_Z,              KC_E,              KC_R,              KC_T,              KC_Y,              KC_U,              KC_I,              KC_O,              KC_P,              \
 LGUI_T(KC_Q),      LALT_T(KC_S),      LCTL_T(KC_D),      LSFT_T(KC_F),      KC_G,              KC_H,              LSFT_T(KC_J),      LCTL_T(KC_K),      LALT_T(KC_L),      LGUI_T(KC_M),      \
