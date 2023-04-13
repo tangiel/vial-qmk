@@ -1,0 +1,17 @@
+{
+    "features": {
+        "rgb_matrix": true
+    },
+
+    "rgblight": {
+        "led_count": 70,
+        "pin": "D3",
+        "split": true
+    },
+
+    "rgb_matrix": {
+        "driver": "WS2812",
+        "max_brightness": 175,
+        "split_count": [35, 35]
+    }
+}

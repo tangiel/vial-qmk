@@ -1,0 +1,16 @@
+{
+    "features": {
+        "rgblight": true
+    },
+
+    "rgblight": {
+        "led_count": 58,
+        "pin": "D3",
+        "split": true,
+        "split_count": [29, 29],
+        "animations": {
+            "breathing": true,
+            "rainbow_mood": true
+        }
+    }
+}

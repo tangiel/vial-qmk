@@ -33,7 +33,6 @@
         "magic": true,
         "nkro": true,
         "oled": true,
-        "rgblight": true,
         "sleep_led": true,
         "space_cadet": false,
         "tap_dance": false
@@ -53,17 +52,6 @@
 
     "qmk": {
         "tap_keycode_delay": 10
-    },
-
-    "rgblight": {
-        "led_count": 58,
-        "pin": "D3",
-        "split": true,
-        "split_count": [29, 29],
-        "animations": {
-            "breathing": true,
-            "rainbow_mood": true
-        }
     },
 
     "split": {

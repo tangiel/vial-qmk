@@ -12,3 +12,4 @@ LTO_ENABLE = yes
 # Reduce size by disabling
 QMK_SETTINGS = no
 COMBO_ENABLE = no
+UNICODEMAP_ENABLE = yes

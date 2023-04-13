@@ -13,14 +13,8 @@
 #define SPLIT_LED_STATE_ENABLE
 #define SPLIT_OLED_ENABLE
 
-// RGB options not yet fully implemented in VIAL info.json
-#define RGBLIGHT_LIMIT_VAL 175
-#define RGBLIGHT_DEFAULT_VAL ( RGBLIGHT_LIMIT_VAL / 2 )
-#define RGBLIGHT_SLEEP
-
-// Static glow is ALWAYS on with RGBLIGHT
-#define RGBLIGHT_EFFECT_BREATHING
-#define RGBLIGHT_EFFECT_RAINBOW_MOOD
+#define UNICODE_SELECTED_MODES UC_WINC, UC_LNX, UC_MAC
+#define UNICODE_KEY_LNX LCTL(LSFT(KC_E))
 
 #define XXX KC_NO
 
